@@ -8,6 +8,7 @@ else {
 }
 
 Function SU { 
-    Start-Process wt.exe -Verb RunAs
+    $dir = Get-Location
+    Start-Process wt -ArgumentList "nt -d $dir" -Verb RunAs
     exit
 }
