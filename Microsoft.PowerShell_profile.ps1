@@ -1,10 +1,10 @@
 Clear-Host
 
 if ($env:TERM_PROGRAM -eq 'vscode') {
-    Set-PoshPrompt -Theme avit
+    oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/avit.omp.json" | Invoke-Expression
 }
 else {
-    Set-PoshPrompt -Theme ~/Documents/WindowsPowerShell/theme.omp.json
+    oh-my-posh init pwsh --config ~/Documents/WindowsPowerShell/theme.omp.json | Invoke-Expression
 }
 
 Function SU { 
