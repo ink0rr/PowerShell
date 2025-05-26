@@ -1,4 +1,4 @@
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/avit.omp.json" | Invoke-Expression
+Invoke-Expression (&starship init powershell)
 
 function su { 
     Start-Process wt -ArgumentList "nt -d ." -Verb RunAs
